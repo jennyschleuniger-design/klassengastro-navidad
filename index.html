@@ -40,18 +40,18 @@
 
       <!-- Ersetze FORM_ACTION_URL durch deine Formspree-URL (z. B. https://formspree.io/f/abcdwxyz) -->
       <form action="https://formsubmit.co/jenny.schleuniger@hf-thun.ch" method="POST">
-  <!-- Pflicht: einmalige Weiterleitung nach Erfolg -->
-<input type="hidden" name="_next" value="https://jennyschleuniger-design.github.io/klassengastro-navidad/thanks.html">
+  <!-- Weiterleitung nach Absenden -->
+  <input type="hidden" name="_next" value="https://jennyschleuniger-design.github.io/klassengastro-navidad/thanks.html">
   <!-- schöneres Mail-Layout -->
   <input type="hidden" name="_template" value="table">
-  <!-- Betreff der E-Mail -->
+  <!-- Betreff der Mail -->
   <input type="hidden" name="_subject" value="La Cena de Navidad – Neue Reservation">
   <!-- Captcha aus -->
   <input type="hidden" name="_captcha" value="false">
-  <!-- Auto-Antwort an Absender (optional) -->
+  <!-- Auto-Antwort an Gast -->
   <input type="hidden" name="_autoresponse" value="Danke für Ihre Reservation für La Cena de Navidad am 9.12. Wir melden uns bei Rückfragen – bis bald an der Hotelfachschule Thun.">
 
-  <!-- Honeypot (Spamschutz) – unsichtbar für echte Nutzer -->
+  <!-- Honeypot (Spamschutz) -->
   <input type="text" name="_honey" style="display:none">
 
   <!-- Fixtermin -->
@@ -99,6 +99,7 @@
 
   <button type="submit" class="btn">Reservation senden</button>
 </form>
+
 
     </section>
 
