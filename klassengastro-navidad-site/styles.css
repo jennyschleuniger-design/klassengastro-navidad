@@ -1,0 +1,46 @@
+/* Navidad-Thema: Tannengrün & Akzent Rot/Gold */
+:root {
+  --bg: #0e2a23;          /* tiefes Tannengrün */
+  --card: #132f27;
+  --muted: #c5d2c7;
+  --text: #f2f6f3;
+  --brand: #d93b3b;       /* Weihnachtsrot */
+  --brand-strong: #b72f2f;
+  --gold: #f0d48a;        /* goldener Akzent */
+  --border: #254a3f;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; color: var(--text); background: radial-gradient(1200px 600px at 10% -20%, rgba(240,212,138,0.12), transparent 60%), var(--bg); }
+.container { width: min(100%, 980px); margin: 0 auto; padding: 0 20px; }
+.site-header { padding: 48px 0 28px; }
+.header-grid { display: grid; gap: 24px; grid-template-columns: 1.2fr 0.8fr; align-items: start; }
+@media (max-width: 860px) { .header-grid { grid-template-columns: 1fr; } }
+h1 { font-size: 42px; margin: 0 0 8px; letter-spacing: -0.02em; }
+.lead { font-weight: 700; color: var(--gold); margin: 0 0 8px; }
+p { color: #e5efe8; line-height: 1.6; }
+.card { background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); border: 1px solid var(--border); border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+.card.info h2 { margin-top: 0; }
+.card ul { list-style: none; padding: 0; margin: 0; }
+.card li { padding: 6px 0; border-bottom: 1px dashed rgba(255,255,255,0.08); }
+.card li:last-child { border-bottom: none; }
+.btn { display: inline-block; background: var(--brand); color: white; padding: 12px 18px; border-radius: 999px; font-weight: 700; text-decoration: none; border: none; cursor: pointer; transition: transform .08s ease, background .2s ease; }
+.btn:hover { background: var(--brand-strong); transform: translateY(-1px); }
+main { padding: 10px 0 60px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+label { display: grid; gap: 8px; margin: 10px 0; font-weight: 600; }
+input, textarea, select { width: 100%; padding: 12px 14px; background: #0c231d; border: 1px solid #295044; color: var(--text); border-radius: 12px; outline: none; }
+input:focus, textarea:focus, select:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(240,212,138,0.25); }
+textarea { resize: vertical; }
+.checkbox { display: flex; align-items: start; gap: 10px; font-weight: 500; color: #e0e9e3; }
+.checkbox input { width: 20px; height: 20px; margin-top: 2px; }
+.form-msg { min-height: 22px; margin-top: 8px; color: #a9f0b5; font-weight: 600; }
+.faq { margin-top: 28px; }
+details { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; margin: 10px 0; }
+summary { cursor: pointer; font-weight: 700; }
+.site-footer { border-top: 1px solid var(--border); padding: 24px 0; color: var(--muted); }
+.site-footer a { color: var(--text); }
+.muted.small { color: var(--muted); font-size: 12px; }
+.flyer { margin: 18px auto 0; max-width: 980px; text-align: center; }
+.flyer img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.flyer figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }

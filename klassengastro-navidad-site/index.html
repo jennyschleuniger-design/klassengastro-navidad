@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Cena de Navidad – Klassengastro HF Thun × GastroBern</title>
+  <meta name="description" content="Reservation für La Cena de Navidad am 9. Dezember 2025 an der Hotelfachschule Thun.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div>
+        <h1>🎄 La Cena de Navidad</h1>
+        <p class="lead">Klassengastro – HF Thun × GastroBern</p>
+        <p>Lasst uns Navidad gemeinsam feiern – mit Freude, guter Stimmung und der magischen Reise des Papá Noel quer durch Südamerika.</p>
+        <a class="btn" href="#reservation">Platz reservieren</a>
+      </div>
+      <div class="card info">
+        <h2>Event-Infos</h2>
+        <ul>
+          <li><strong>Datum:</strong> Dienstag, 9. Dezember 2025</li>
+          <li><strong>Zeit:</strong> Einlass ab 18:30 · Ende ca. 21:45</li>
+          <li><strong>Ort:</strong> Hotelfachschule Thun, Mönchstrasse 37, 3600 Thun</li>
+          <li><strong>Format:</strong> Welcome-Drink, 3 Gänge, Wasser, Weinbegleitung, Kaffee/Tee</li>
+        </ul>
+      </div>
+    </div>
+    <figure class="flyer">
+      <img src="./assets/flyer.jpg" alt="La Cena de Navidad – Klassengastro Flyer" />
+      <figcaption>La Cena de Navidad · 9. Dezember · 18:30 · Hotelfachschule Thun</figcaption>
+    </figure>
+  </header>
+
+  <main class="container">
+    <section id="reservation" class="card">
+      <h2>Reservation</h2>
+      <p>Bitte Formular ausfüllen. Nach dem Absenden erhältst du eine Bestätigung per E-Mail.</p>
+
+      <!-- Ersetze FORM_ACTION_URL durch deine Formspree-URL (z. B. https://formspree.io/f/abcdwxyz) -->
+      <form id="resForm" action="FORM_ACTION_URL" method="POST" novalidate>
+        <div class="grid">
+          <input type="hidden" name="termin" value="2025-12-09" />
+
+          <label>Vor- und Nachname*
+            <input type="text" name="name" required placeholder="Max Muster" autocomplete="name">
+          </label>
+
+          <label>E-Mail*
+            <input type="email" name="email" required placeholder="max@beispiel.ch" autocomplete="email">
+          </label>
+
+          <label>Telefon (optional)
+            <input type="tel" name="phone" placeholder="+41 79 123 45 67" autocomplete="tel">
+          </label>
+
+          <label>Personentyp*
+            <select name="rolle" required>
+              <option value="">Bitte wählen …</option>
+              <option>Gast</option>
+              <option>Schüler:in</option>
+              <option>Lehrperson</option>
+              <option>Angehörige:r</option>
+            </select>
+          </label>
+
+          <label>Anzahl Personen*
+            <input type="number" name="anzahl" min="1" max="8" required value="1">
+          </label>
+        </div>
+
+        <label>Allergien/Unverträglichkeiten (optional)
+          <textarea name="allergien" rows="3" placeholder="z. B. Nüsse, Laktose, Gluten …"></textarea>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" id="privacy" required>
+          <span>
+            Ich bin damit einverstanden, dass meine Angaben zwecks Reservation verarbeitet und an die Hotelfachschule Thun übermittelt werden.
+            Für minderjährige Schüler:innen ist eine Einwilligung der Erziehungsberechtigten erforderlich.
+          </span>
+        </label>
+
+        <button type="submit" class="btn" id="submitBtn">Reservation senden</button>
+        <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+      <p class="muted small">Fragen? Kontakt: <a href="mailto:event@thelabhotel.ch">event@thelabhotel.ch</a></p>
+    </section>
+
+    <section class="faq">
+      <h3>Hinweise</h3>
+      <details>
+        <summary>Wer organisiert den Anlass?</summary>
+        <p>Der Event ist Teil des Transfermoduls im 1. Studienjahr der Hotelfachschule Thun in Zusammenarbeit mit GastroBern.</p>
+      </details>
+      <details>
+        <summary>Gibt es eine Platzlimite?</summary>
+        <p>Ja, die Plätze sind limitiert. Wir bitten um frühzeitige Reservation.</p>
+      </details>
+      <details>
+        <summary>Jugendschutz?</summary>
+        <p>Die gesetzlichen Bestimmungen werden eingehalten. Minderjährige benötigen eine Einverständniserklärung der Erziehungsberechtigten.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 Hotelfachschule Thun · GastroBern</small>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
