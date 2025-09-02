@@ -39,53 +39,67 @@
       <p>Bitte Formular ausfüllen. Nach dem Absenden erhältst du eine Bestätigung per E-Mail.</p>
 
       <!-- Ersetze FORM_ACTION_URL durch deine Formspree-URL (z. B. https://formspree.io/f/abcdwxyz) -->
-      <form id="resForm" action="FORM_ACTION_URL" method="POST" novalidate>
-        <div class="grid">
-          <input type="hidden" name="termin" value="2025-12-09" />
+      <form action="https://formsubmit.co/jenny.schleuniger@hf-thun.ch" method="POST">
+  <!-- Pflicht: einmalige Weiterleitung nach Erfolg -->
+  <input type="hidden" name="_next" value="https://jennyschleuniger-design.github.io/klassengastro-navidad/thanks.html">
+  <!-- schöneres Mail-Layout -->
+  <input type="hidden" name="_template" value="table">
+  <!-- Betreff der E-Mail -->
+  <input type="hidden" name="_subject" value="La Cena de Navidad – Neue Reservation">
+  <!-- Captcha aus -->
+  <input type="hidden" name="_captcha" value="false">
+  <!-- Auto-Antwort an Absender (optional) -->
+  <input type="hidden" name="_autoresponse" value="Danke für Ihre Reservation für La Cena de Navidad am 9.12. Wir melden uns bei Rückfragen – bis bald an der Hotelfachschule Thun.">
 
-          <label>Vor- und Nachname*
-            <input type="text" name="name" required placeholder="Max Muster" autocomplete="name">
-          </label>
+  <!-- Honeypot (Spamschutz) – unsichtbar für echte Nutzer -->
+  <input type="text" name="_honey" style="display:none">
 
-          <label>E-Mail*
-            <input type="email" name="email" required placeholder="max@beispiel.ch" autocomplete="email">
-          </label>
+  <!-- Fixtermin -->
+  <input type="hidden" name="termin" value="2025-12-09">
 
-          <label>Telefon (optional)
-            <input type="tel" name="phone" placeholder="+41 79 123 45 67" autocomplete="tel">
-          </label>
+  <div class="grid">
+    <label>Vor- und Nachname*
+      <input type="text" name="name" required placeholder="Max Muster" autocomplete="name">
+    </label>
 
-          <label>Personentyp*
-            <select name="rolle" required>
-              <option value="">Bitte wählen …</option>
-              <option>Gast</option>
-              <option>Schüler:in</option>
-              <option>Lehrperson</option>
-              <option>Angehörige:r</option>
-            </select>
-          </label>
+    <label>E-Mail*
+      <input type="email" name="email" required placeholder="max@beispiel.ch" autocomplete="email">
+    </label>
 
-          <label>Anzahl Personen*
-            <input type="number" name="anzahl" min="1" max="8" required value="1">
-          </label>
-        </div>
+    <label>Telefon (optional)
+      <input type="tel" name="phone" placeholder="+41 79 123 45 67" autocomplete="tel">
+    </label>
 
-        <label>Allergien/Unverträglichkeiten (optional)
-          <textarea name="allergien" rows="3" placeholder="z. B. Nüsse, Laktose, Gluten …"></textarea>
-        </label>
+    <label>Personentyp*
+      <select name="rolle" required>
+        <option value="">Bitte wählen …</option>
+        <option>Gast</option>
+        <option>Schüler:in</option>
+        <option>Lehrperson</option>
+        <option>Angehörige:r</option>
+      </select>
+    </label>
 
-        <label class="checkbox">
-          <input type="checkbox" id="privacy" required>
-          <span>
-            Ich bin damit einverstanden, dass meine Angaben zwecks Reservation verarbeitet und an die Hotelfachschule Thun übermittelt werden.
-            Für minderjährige Schüler:innen ist eine Einwilligung der Erziehungsberechtigten erforderlich.
-          </span>
-        </label>
+    <label>Anzahl Personen*
+      <input type="number" name="anzahl" min="1" max="8" required value="1">
+    </label>
+  </div>
 
-        <button type="submit" class="btn" id="submitBtn">Reservation senden</button>
-        <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
-      </form>
-      <p class="muted small">Fragen? Kontakt: <a href="mailto:event@thelabhotel.ch">event@thelabhotel.ch</a></p>
+  <label>Allergien/Unverträglichkeiten (optional)
+    <textarea name="allergien" rows="3" placeholder="z. B. Nüsse, Laktose, Gluten …"></textarea>
+  </label>
+
+  <label class="checkbox">
+    <input type="checkbox" required>
+    <span>
+      Ich bin damit einverstanden, dass meine Angaben zwecks Reservation verarbeitet und an die Hotelfachschule Thun übermittelt werden.
+      Für minderjährige Schüler:innen ist eine Einwilligung der Erziehungsberechtigten erforderlich.
+    </span>
+  </label>
+
+  <button type="submit" class="btn">Reservation senden</button>
+</form>
+
     </section>
 
     <section class="faq">
