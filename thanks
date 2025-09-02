@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Danke – La Cena de Navidad</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="container" style="padding:60px 20px;">
+  <div class="card">
+    <h1>🎄 Vielen Dank für Ihre Reservation!</h1>
+    <p>Wir haben Ihre Angaben erhalten und senden eine Bestätigung an Ihre E-Mail-Adresse.</p>
+    <p><a class="btn" href="./">Zurück zur Startseite</a></p>
+  </div>
+</body>
+</html>
