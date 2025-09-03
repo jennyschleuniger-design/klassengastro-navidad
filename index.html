@@ -79,17 +79,7 @@
       <p>Bitte Formular ausfüllen. Nach unserer Bearbeitung deiner Reservation erhältst du eine Bestätigung per E-Mail.</p>
 
     <form action="https://script.google.com/macros/s/AKfycbwLstzTU416bZdOQ4JWBF0aZUuIW1G1apXvO5JdW0gRbqmrxn29xiYAP25E8iU_lvA/exec" method="POST">
-        <!-- Weiterleitung nach Absenden -->
-        <input type="hidden" name="_next" value="https://jennyschleuniger-design.github.io/klassengastro-navidad/thanks.html">
-        <!-- Tabellen-Layout in der Mail -->
-        <input type="hidden" name="_template" value="table">
-        <!-- Betreff der eingehenden Mail an uns -->
-        <input type="hidden" name="_subject" value="La Cena de Navidad – Neue Reservation">
-        <!-- Captcha aus -->
-        <input type="hidden" name="_captcha" value="false">
-        <!-- Auto-Antwort an den Gast -->
-        <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Reservation für «La Cena de Navidad» am 9. Dezember. Ihre Angaben sind bei uns eingegangen. Eine persönliche Bestätigung erhalten Sie innerhalb von 1–2 Tagen.">
-        <!-- Einige Postfächer erkennen die Absenderadresse stabiler mit _replyto -->
+        
         <input type="hidden" name="_replyto" value="">
         <!-- Honeypot (Spamschutz) -->
         <input type="text" name="_honey" style="display:none">
@@ -205,5 +195,23 @@
       <small>&copy; 2025 Hotelfachschule Thun · Jenny Schleuniger</small>
     </div>
   </footer>
+    <script>
+    const COUNT_ENDPOINT = "DEINE_APPS_SCRIPT_WEB_APP_URL";
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const res = await fetch(COUNT_ENDPOINT, { cache: 'no-store' });
+        const data = await res.json();
+        const form = document.querySelector('#reservation form');
+        const sold = document.getElementById('soldout');
+        if (data.count >= data.capacity) { 
+          form.style.display = 'none'; 
+          sold.style.display = 'block'; 
+        }
+      } catch(e){}
+    });
+  </script>
+</body>
+</html>
+
 </body>
 </html>
