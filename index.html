@@ -8,6 +8,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
+  <script>
+  const COUNT_ENDPOINT = "https://script.google.com/macros/library/d/1jbj9RhQxxZ46CenXfarr-smzVTqcmjwhnrC33MzvjH0lM98jhrDK-xjr/1";
+
+  async function checkCapacity() {
+    try {
+      const res = await fetch(COUNT_ENDPOINT, { cache: "no-store" });
+      if (!res.ok) return;
+      const data = await res.json();
+      const capacity = Number(data?.capacity ?? 120);
+      const count    = Number(data?.count ?? 0);
+
+      const form = document.querySelector('#reservation form');
+      const sold = document.getElementById('soldout');
+      if (!form || !sold) return;
+
+      if (count >= capacity) {
+        form.style.display = 'none';
+        sold.style.display = 'block';
+      } else {
+        form.style.display = '';
+        sold.style.display = 'none';
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', checkCapacity);
+</script>
+
 <body>
   <header class="site-header">
     <div class="container header-grid">
@@ -49,7 +78,7 @@
       <h2>Reservation</h2>
       <p>Bitte Formular ausfüllen. Nach unserer Bearbeitung deiner Reservation erhältst du eine Bestätigung per E-Mail.</p>
 
-      <form action="https://formsubmit.co/jenny.schleuniger@hf-thun.ch" method="POST">
+    <form action="https://script.google.com/macros/s/AKfycbwLstzTU416bZdOQ4JWBF0aZUuIW1G1apXvO5JdW0gRbqmrxn29xiYAP25E8iU_lvA/exec" method="POST">
         <!-- Weiterleitung nach Absenden -->
         <input type="hidden" name="_next" value="https://jennyschleuniger-design.github.io/klassengastro-navidad/thanks.html">
         <!-- Tabellen-Layout in der Mail -->
@@ -116,8 +145,11 @@
         <button type="submit" class="btn">Reservation senden</button>
       </form>
       <p class="muted small" style="margin-top:8px;">
-        Hinweis: Sie erhalten automatisch eine Eingangsbestätigung per E-Mail. Die persönliche Bestätigung folgt innerhalb von 1–2 Tagen.
+        Hinweis: Die persönliche Bestätigung folgt innerhalb von 1–2 Tagen.
       </p>
+      <p id="soldout" class="card" style="display:none; margin-top:12px; padding:12px;">
+  Leider ausgebucht – wir haben das Limit von 120 Gästen erreicht. Danke fürs Interesse!
+</p>
     </section>
 
     <!-- TEAM -->
