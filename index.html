@@ -14,14 +14,13 @@
       <div>
         <h1>🎄 La Cena de Navidad</h1>
         <p class="lead">Klassengastro – HF Thun × GastroBern</p>
-        <p>Lasst uns Navidad gemeinsam feiern – mit Freude, guter Stimmung und der magischen Reise des Papá Noel quer durch Südamerika.
-«La Cena de Navidad» ist ein besonderes Projekt, das von Studierenden der Hotelfachschule Thun
-  gemeinsam mit Schüler:innen der 8. Klasse Steffisburg umgesetzt wird. Ziel ist es, junge Menschen
-  für die Welt der Hospitality zu begeistern und ihnen die Möglichkeit zu geben, echte
-  Gastfreundschaft selbst zu erleben und mitzugestalten. Mit Kreativität, Teamgeist und viel Freude
-  möchten wir unseren Gästen einen festlichen Abend voller kulinarischer Highlights und herzlicher
-  Atmosphäre schenken.
-</p>
+        <p>
+          «La Cena de Navidad» ist ein besonderes Projekt, das von Studierenden der Hotelfachschule Thun
+          gemeinsam mit Schüler:innen der 8. Klasse Steffisburg umgesetzt wird. Ziel ist es, junge Menschen
+          für die Welt der Hospitality zu begeistern und ihnen die Möglichkeit zu geben, echte Gastfreundschaft
+          selbst zu erleben und mitzugestalten. Mit Kreativität, Teamgeist und viel Freude möchten wir unseren
+          Gästen einen festlichen Abend voller kulinarischer Highlights und herzlicher Atmosphäre schenken.
+        </p>
 
         <a class="btn" href="#reservation">Platz reservieren</a>
       </div>
@@ -37,6 +36,7 @@
         </ul>
       </div>
     </div>
+
     <figure class="flyer">
       <img src="./assets/flyer.jpg" alt="La Cena de Navidad – Klassengastro Flyer" />
       <figcaption>La Cena de Navidad · 9. Dezember · 18:30 · Hotelfachschule Thun</figcaption>
@@ -44,132 +44,9 @@
   </header>
 
   <main class="container">
+    <!-- RESERVATION -->
     <section id="reservation" class="card">
       <h2>Reservation</h2>
       <p>Bitte Formular ausfüllen. Nach unserer Bearbeitung deiner Reservation erhältst du eine Bestätigung per E-Mail.</p>
 
-      <!-- Ersetze FORM_ACTION_URL durch deine Formspree-URL (z. B. https://formspree.io/f/abcdwxyz) -->
       <form action="https://formsubmit.co/jenny.schleuniger@hf-thun.ch" method="POST">
-  <!-- Weiterleitung nach Absenden -->
-  <input type="hidden" name="_next" value="https://jennyschleuniger-design.github.io/klassengastro-navidad/thanks.html">
-  <!-- Tabellen-Layout in der Mail -->
-  <input type="hidden" name="_template" value="table">
-  <!-- Betreff der eingehenden Mail an dich -->
-  <input type="hidden" name="_subject" value="La Cena de Navidad – Neue Reservation">
-  <!-- Captcha aus -->
-  <input type="hidden" name="_captcha" value="false">
-  <!-- Auto-Antwort an den Gast -->
-  <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Reservation für «La Cena de Navidad» am 9. Dezember. Ihre Angaben sind bei uns eingegangen. Eine persönliche Bestätigung erhalten Sie innerhalb von 1–2 Tagen.">
-  <!-- Honeypot (Spamschutz) -->
-  <input type="text" name="_honey" style="display:none">
-  <!-- Fixtermin -->
-  <input type="hidden" name="termin" value="2025-12-09">
-
-  <div class="grid">
-    <label>Vor- und Nachname*
-      <input type="text" name="name" required placeholder="Max Muster" autocomplete="name">
-    </label>
-
-    <label>E-Mail*
-      <!-- Wichtig: name="email" lassen, damit Auto-Reply funktioniert -->
-      <input type="email" name="email" required placeholder="max@beispiel.ch" autocomplete="email">
-    </label>
-
-    <label>Telefon (optional)
-      <input type="tel" name="phone" placeholder="+41 79 123 45 67" autocomplete="tel">
-    </label>
-
-    <label>Personentyp*
-      <select name="rolle" required>
-        <option value="">Bitte wählen …</option>
-        <option>Gast</option>
-        <option>Schüler:in</option>
-        <option>Lehrperson</option>
-        <option>Angehörige:r</option>
-      </select>
-    </label>
-
-    <label>Anzahl Personen*
-      <input type="number" name="anzahl" min="1" max="8" required value="1">
-    </label>
-
-    <label>Kinder bis 10 Jahre
-      <input type="number" name="kinder" min="0" max="8" value="0">
-    </label>
-  </div>
-
-  <label>Allergien/Unverträglichkeiten (optional)
-    <textarea name="allergien" rows="3" placeholder="z. B. Nüsse, Laktose, Gluten …"></textarea>
-  </label>
-
-  <label class="checkbox">
-    <input type="checkbox" required>
-    <span>
-      Ich bin damit einverstanden, dass meine Angaben zwecks Reservation verarbeitet und an die Hotelfachschule Thun übermittelt werden.
-      Für minderjährige Schüler:innen ist eine Einwilligung der Erziehungsberechtigten erforderlich.
-    </span>
-  </label>
-
-  <button type="submit" class="btn">Reservation senden</button>
-</form>
-
-<!-- TEAM -->
-<section class="container card" id="team" style="margin-top:28px;">
-  <h2>Das Projektteam</h2>
-  <p class="lead" style="margin:6px 0 14px;">
-    Studierende der Hotelfachschule Thun setzen «La Cena de Navidad» in Zusammenarbeit mit GastroBern um.
-  </p>
-
-  <!-- Gruppenfoto -->
-  <figure class="team-photo" style="margin:0 0 14px;">
-    <img src="./assets/team-hf-thun-navidad-2025.jpg" alt="Projektteam Hotelfachschule Thun – La Cena de Navidad 2025" style="width:100%;height:auto;border-radius:14px;border:1px solid #254a3f;box-shadow:0 10px 30px rgba(0,0,0,0.2);" />
-    <figcaption style="font-size:13px; color:#c5d2c7; margin-top:6px;">
-      Das Team hinter «La Cena de Navidad»
-    </figcaption>
-  </figure>
-
-  <!-- Namen -->
-  <ul class="team-list" style="list-style:none; padding:0; margin:12px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;">
-    <li>Dragos Andrei Patrichi</li>
-    <li>Marusha van den Berge</li>
-    <li>Daniel Merk</li>
-    <li>Jonas Fonseca</li>
-    <li>Laura Hachen</li>
-    <li>Ladina Anna Kuster</li>
-    <li>Alfredo Suarez Weeber</li>
-    <li>Ignacio Levia</li>
-    <li>Ilia Voronin</li>
-    <li>Sarmilan Sellakumar</li>
-    <li>Jenny Schleuniger</li>
-  </ul>
-</section>
-
-
-    </section>
-
-    <section class="faq">
-      <h3>Hinweise</h3>
-      <details>
-        <summary>Wer organisiert den Anlass?</summary>
-        <p>Der Event ist Teil des Transfermoduls im 1. Studienjahr der Hotelfachschule Thun in Zusammenarbeit mit GastroBern.</p>
-      </details>
-      <details>
-        <summary>Gibt es eine Platzlimite?</summary>
-        <p>Ja, die Plätze sind limitiert. Wir bitten um frühzeitige Reservation.</p>
-      </details>
-      <details>
-        <summary>Jugendschutz?</summary>
-        <p>Die gesetzlichen Bestimmungen werden eingehalten. Minderjährige benötigen eine Einverständniserklärung der Erziehungsberechtigten.</p>
-      </details>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>&copy; 2025 Hotelfachschule Thun · Jenny Schleuniger </small>
-    </div>
-  </footer>
-
-
-</body>
-</html>
