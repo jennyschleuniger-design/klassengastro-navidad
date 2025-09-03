@@ -52,18 +52,16 @@
       <form action="https://formsubmit.co/jenny.schleuniger@hf-thun.ch" method="POST">
   <!-- Weiterleitung nach Absenden -->
   <input type="hidden" name="_next" value="https://jennyschleuniger-design.github.io/klassengastro-navidad/thanks.html">
-  <!-- schöneres Mail-Layout -->
+  <!-- Tabellen-Layout in der Mail -->
   <input type="hidden" name="_template" value="table">
-  <!-- Betreff der Mail -->
+  <!-- Betreff der eingehenden Mail an dich -->
   <input type="hidden" name="_subject" value="La Cena de Navidad – Neue Reservation">
   <!-- Captcha aus -->
   <input type="hidden" name="_captcha" value="false">
-  <!-- Auto-Antwort an Gast -->
-  <input type="hidden" name="_autoresponse" value="Danke für Ihre Reservation für La Cena de Navidad am 9.12. Wir melden uns bei Rückfragen – bis bald an der Hotelfachschule Thun.">
-
+  <!-- Auto-Antwort an den Gast -->
+  <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Reservation für «La Cena de Navidad» am 9. Dezember. Ihre Angaben sind bei uns eingegangen. Eine persönliche Bestätigung erhalten Sie innerhalb von 1–2 Tagen.">
   <!-- Honeypot (Spamschutz) -->
   <input type="text" name="_honey" style="display:none">
-
   <!-- Fixtermin -->
   <input type="hidden" name="termin" value="2025-12-09">
 
@@ -73,30 +71,31 @@
     </label>
 
     <label>E-Mail*
+      <!-- Wichtig: name="email" lassen, damit Auto-Reply funktioniert -->
       <input type="email" name="email" required placeholder="max@beispiel.ch" autocomplete="email">
     </label>
 
-    <label>Telefon
-      <input type="tel" name="phone" required placeholder="+41 79 123 45 67" autocomplete="tel">
+    <label>Telefon (optional)
+      <input type="tel" name="phone" placeholder="+41 79 123 45 67" autocomplete="tel">
     </label>
 
     <label>Personentyp*
       <select name="rolle" required>
         <option value="">Bitte wählen …</option>
         <option>Gast</option>
-        <option>Eltern, Angehörige:r der Schüler*innen</option>
-         <option>Angehörige:r, Bekannte:r der Student*innen</option>
+        <option>Schüler:in</option>
+        <option>Lehrperson</option>
+        <option>Angehörige:r</option>
       </select>
     </label>
 
     <label>Anzahl Personen*
-  <input type="number" name="anzahl" min="1" max="8" required value="1">
-</label>
+      <input type="number" name="anzahl" min="1" max="8" required value="1">
+    </label>
 
-<label>Anzahl Kinder bis 10 Jahre
-  <input type="number" name="kinder" min="0" max="8" value="0">
-</label>
-
+    <label>Kinder bis 10 Jahre
+      <input type="number" name="kinder" min="0" max="8" value="0">
+    </label>
   </div>
 
   <label>Allergien/Unverträglichkeiten (optional)
@@ -113,6 +112,7 @@
 
   <button type="submit" class="btn">Reservation senden</button>
 </form>
+
 <!-- TEAM -->
 <section class="container card" id="team" style="margin-top:28px;">
   <h2>Das Projektteam</h2>
@@ -170,6 +170,6 @@
     </div>
   </footer>
 
-  <script src="./script.js"></script>
+
 </body>
 </html>
